@@ -22,14 +22,16 @@ jobs:
     env:
       BOOST_ROOT: C:\local\boost_1_82_0
     if: |
-      github.repository == 'adameng/AzerothCore-wotlk-with-NPCBots'
+      github.repository == 'adameng/AzerothCore-wotlk-with-NPCBots' && !github.event.pull_request.draft
     steps:
-      - name: Checkout repository and submodules
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
+     # - name: Checkout repository and submodules
+     #   uses: actions/checkout@v4
+     #   with:
+     #     submodules: recursive
+     # - name: ccache
+     #   uses: hendrikmuhs/ccache-action@v1.2.9
+      - uses: actions/checkout@v4
       - name: ccache
-        uses: hendrikmuhs/ccache-action@v1.2.9
       - name: Configure OS
         shell: bash
         env:
