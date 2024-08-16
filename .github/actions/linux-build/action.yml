@@ -137,7 +137,3 @@ runs:
         AC_LOGS_DIR=env/dist/logs
         EOF
         
-      - uses: actions/upload-artifact@v3
-        with:
-          name: MSVC17-release
-          path: env/dist
