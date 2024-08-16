@@ -1,6 +1,6 @@
 name: windows-build
-on:
-  push:
+#on:
+#  push:
     branches:
       - 'npcbots_3.3.5'
       - 'CI'
