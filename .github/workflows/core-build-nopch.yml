@@ -1,10 +1,10 @@
 name: nopch-build
-#on:
-# push:
+on:
+ push:
     branches:
       - 'npcbots_3.3.5'
       - 'CI'
-  pull_request:
+ pull_request:
     types:
       - opened
       - reopened
@@ -42,3 +42,8 @@ jobs:
           CC: ${{ matrix.compiler.CC }}
           CXX: ${{ matrix.compiler.CXX }}
           pch: false
+          
+      - uses: actions/upload-artifact@v3
+        with:
+          name: MSVC17-release
+          path: env/dist
