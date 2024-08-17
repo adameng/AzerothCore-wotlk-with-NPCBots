@@ -35,7 +35,7 @@ jobs:
           CXX: ${{ matrix.compiler.CXX }}
           pch: false
           
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
-          name: MSVC17-release
+          name: u2404-release
           path: env/dist
