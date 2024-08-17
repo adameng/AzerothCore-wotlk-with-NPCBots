@@ -29,6 +29,8 @@ jobs:
     if: github.repository == 'adameng/AzerothCore-wotlk-with-NPCBots'
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - uses: ./.github/actions/linux-build
         with:
           CC: ${{ matrix.compiler.CC }}
