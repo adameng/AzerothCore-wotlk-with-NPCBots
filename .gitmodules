@@ -4,9 +4,6 @@
 [submodule "modules/mod-assistant"]
 	path = modules/mod-assistant
 	url = https://github.com/noisiver/mod-assistant.git
-[submodule "modules/mod-eluna"]
-	path = modules/mod-eluna
-	url = https://github.com/azerothcore/mod-eluna.git
 [submodule "modules/mod-transmog"]
 	path = modules/mod-transmog
 	url = https://github.com/azerothcore/mod-transmog.git
