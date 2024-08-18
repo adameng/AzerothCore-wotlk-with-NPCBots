@@ -24,13 +24,10 @@ jobs:
     if: |
       github.repository == 'adameng/AzerothCore-wotlk-with-NPCBots' && !github.event.pull_request.draft
     steps:
-     # - name: Checkout repository and submodules
-     #   uses: actions/checkout@v4
-     #   with:
-     #     submodules: recursive
-     # - name: ccache
-     #   uses: hendrikmuhs/ccache-action@v1.2.9
-      - uses: actions/checkout@v4
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - name: ccache
         uses: hendrikmuhs/ccache-action@v1.2.9
       - name: Configure OS
@@ -70,7 +67,7 @@ jobs:
           cp "/c/Program Files/OpenSSL/bin/legacy.dll" "env/dist"
           cp "/c/Program Files/OpenSSL/bin/libcrypto-3-x64.dll" "env/dist"
           cp "/c/Program Files/OpenSSL/bin/libssl-3-x64.dll" "env/dist"
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: windows-2022-MSVC17-release
           path: env/dist
